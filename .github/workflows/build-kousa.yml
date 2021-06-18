@@ -1,5 +1,10 @@
 name: Build Kousa
-on: [push]
+on:
+  push:
+    paths:
+      - 'kousa/lib/**'
+    branches:
+      - staging
 jobs:
   docker:
     runs-on: ubuntu-latest
