@@ -20,5 +20,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          directory: kousa
+          file: kousa/Dockerfile
           tags: staging
