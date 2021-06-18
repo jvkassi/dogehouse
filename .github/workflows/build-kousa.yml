@@ -1,9 +1,15 @@
 name: Build Kousa
 on: [push]
 jobs:
-  build_kousa:
+  docker:
     runs-on: ubuntu-latest
     steps:
+      -
+        name: check
+        run: ls
+      -
+        name: check
+        run: ls kousa
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
@@ -21,4 +27,4 @@ jobs:
         with:
           push: true
           context: ./kousa
-          tags: staging
+          tags: ${{ github.repository_owner }}/kousa
