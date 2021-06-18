@@ -1,8 +1,8 @@
 name: Build Kousa
 on:
   push:
-    paths:
-      - 'kousa/lib/**'
+#     paths:
+#       - 'kousa/lib/**'
     branches:
       - staging
 jobs:
@@ -35,4 +35,4 @@ jobs:
         with:
           push: true
           context: ./kousa
-          tags: ${{ github.repository_owner }}/kousa
+          tags: ${{ github.repository_owner }}/kousa:staging
